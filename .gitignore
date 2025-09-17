@@ -1,5 +1,4 @@
-
-Action: file_editor create /app/.gitignore --file-text "# Dependencies
+"# Dependencies
 node_modules/
 npm-debug.log*
 yarn-debug.log*
@@ -88,4 +87,3 @@ jspm_packages/
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test"
-Observation: Failed to create file: File already exists at: /app/.gitignore. Cannot overwrite files using command `create`.
