@@ -1,6 +1,4 @@
-Sekarang mari saya tambahkan CSS untuk notifikasi dan komponen yang masih kurang:
-Action: file_editor str_replace /app/style.css --old-str "/* Animations */
-@keyframes fadeInLeft {" --new-str "/* Notification Styles */
+/* Notification Styles */
 .notification {
     position: fixed;
     top: 2rem;
@@ -340,5 +338,4 @@ Action: file_editor str_replace /app/style.css --old-str "/* Animations */
 }
 
 /* Animations */
-@keyframes fadeInLeft {"
-Observation: Edit was successful.
+@keyframes fadeInLeft {
