@@ -1,242 +1,726 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulsaKu - Isi Pulsa Online Terpercaya & Terlengkap</title>
+    <meta name="description" content="Isi pulsa online untuk semua operator dengan harga terbaik. Telkomsel, XL, Indosat, Tri, Smartfren tersedia 24/7.">
+    <meta name="keywords" content="isi pulsa online, pulsa murah, top up pulsa, bayar tagihan, token listrik">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <!-- Header -->
-  <section id="header">
-    <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="#hero">
-            <h1><span>D</span>odi <span>S</span>anjaya</h1>
-          </a>
-        </div>
-        <div class="nav-list">
-          <div class="hamburger">
-            <div class="bar"></div>
-          </div>
-          <ul>
-            <li><a href="#hero" data-after="Home">Home</a></li>
-            <li><a href="#services" data-after="Service">Services</a></li>
-            <li><a href="#projects" data-after="Projects">Projects</a></li>
-            <li><a href="#about" data-after="About">About</a></li>
-            <li><a href="#contact" data-after="Contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Header -->
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>PulsaKu</span>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#home" class="nav-link">Beranda</a>
+                    <a href="#produk" class="nav-link">Produk</a>
+                    <a href="#harga" class="nav-link">Harga</a>
+                    <a href="#cara-order" class="nav-link">Cara Order</a>
+                    <a href="#kontak" class="nav-link">Kontak</a>
+                    <button class="btn-login" onclick="openLoginModal()">
+                        <i class="fas fa-user"></i>
+                        Masuk
+                    </button>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Isi Pulsa Online
+                    <span class="gradient-text">Terpercaya #1</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Isi pulsa semua operator dengan harga terbaik dan proses super cepat. 
+                    Tersedia 24/7 untuk kebutuhan pulsa, paket data, dan token listrik Anda.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToProduk()">
+                        <i class="fas fa-shopping-cart"></i>
+                        Beli Sekarang
+                    </button>
+                    <button class="btn-secondary" onclick="showPriceList()">
+                        <i class="fas fa-list"></i>
+                        Lihat Harga
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">100K+</span>
+                        <span class="stat-label">Pelanggan</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Layanan</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99%</span>
+                        <span class="stat-label">Sukses</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="Isi Pulsa Online" class="hero-img">
+                <div class="hero-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>100% Aman</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Hero Section  -->
-  <section id="hero">
-    <div class="hero container">
-      <div>
-        <h1>Hello, <span></span></h1>
-        <h1>My Name is <span></span></h1>
-        <h1>Dodi Sanjaya <span></span></h1>
-        <a href="#projects" type="button" class="cta">Portfolio</a>
-      </div>
-    </div>
-  </section>
-  <!-- End Hero Section  -->
+    <!-- Operator Section -->
+    <section class="operators">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Semua Operator Tersedia</h2>
+                <p class="section-subtitle">Kami melayani semua operator seluler di Indonesia</p>
+            </div>
+            
+            <div class="operators-grid">
+                <div class="operator-card" data-operator="telkomsel">
+                    <div class="operator-logo telkomsel">
+                        <i class="fas fa-signal"></i>
+                        <span>Telkomsel</span>
+                    </div>
+                    <div class="operator-info">
+                        <p>Pulsa & Paket Data</p>
+                        <span class="price-from">Mulai Rp 5.000</span>
+                    </div>
+                </div>
 
-  <!-- Service Section -->
-  <section id="services">
-    <div class="services container">
-      <div class="service-top">
-        <h1 class="section-title">Serv<span>i</span>ces</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum deleniti maiores pariatur assumenda quas
-          magni et, doloribus quod voluptate quasi molestiae magnam officiis dolorum, dolor provident atque molestias
-          voluptatum explicabo!</p>
-      </div>
-      <div class="service-bottom">
-        <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
-            architecto placeat beatae tenetur officia quod</p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
-            architecto placeat beatae tenetur officia quod</p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
-            architecto placeat beatae tenetur officia quod</p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
-            architecto placeat beatae tenetur officia quod</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Service Section -->
+                <div class="operator-card" data-operator="xl">
+                    <div class="operator-logo xl">
+                        <i class="fas fa-wifi"></i>
+                        <span>XL Axiata</span>
+                    </div>
+                    <div class="operator-info">
+                        <p>Pulsa & Paket Data</p>
+                        <span class="price-from">Mulai Rp 5.000</span>
+                    </div>
+                </div>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="projects container">
-      <div class="projects-header">
-        <h1 class="section-title">Recent <span>Projects</span></h1>
-      </div>
-      <div class="all-projects">
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 1</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
-          </div>
-          <div class="project-img">
-            <img src="./img/img-1.png" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 2</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
-          </div>
-          <div class="project-img">
-            <img src="./img/img-1.png" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 3</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
-          </div>
-          <div class="project-img">
-            <img src="./img/img-1.png" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 4</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
-          </div>
-          <div class="project-img">
-            <img src="./img/img-1.png" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 5</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
-          </div>
-          <div class="project-img">
-            <img src="./img/img-1.png" alt="img">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Projects Section -->
+                <div class="operator-card" data-operator="indosat">
+                    <div class="operator-logo indosat">
+                        <i class="fas fa-broadcast-tower"></i>
+                        <span>Indosat</span>
+                    </div>
+                    <div class="operator-info">
+                        <p>Pulsa & Paket Data</p>
+                        <span class="price-from">Mulai Rp 5.000</span>
+                    </div>
+                </div>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="about container">
-      <div class="col-left">
-        <div class="about-img">
-          <img src="./img/img-2.png" alt="img">
-        </div>
-      </div>
-      <div class="col-right">
-        <h1 class="section-title">About <span>me</span></h1>
-        <h2>Front End Developer</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, velit alias eius non illum beatae atque
-          repellat ratione qui veritatis repudiandae adipisci maiores. At inventore necessitatibus deserunt
-          exercitationem cumque earum omnis ipsum rem accusantium quis, quas quia, accusamus provident suscipit magni!
-          Expedita sint ad dolore, commodi labore nihil velit earum ducimus nulla quae nostrum fugit aut, deserunt
-          reprehenderit libero enim!</p>
-        <a href="#" class="cta">Download Resume</a>
-      </div>
-    </div>
-  </section>
-  <!-- End About Section -->
+                <div class="operator-card" data-operator="tri">
+                    <div class="operator-logo tri">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>3 (Tri)</span>
+                    </div>
+                    <div class="operator-info">
+                        <p>Pulsa & Paket Data</p>
+                        <span class="price-from">Mulai Rp 5.000</span>
+                    </div>
+                </div>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="contact container">
-      <div>
-        <h1 class="section-title">Contact <span>info</span></h1>
-      </div>
-      <div class="contact-items">
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
-          <div class="contact-info">
-            <h1>Phone</h1>
-            <h2>+82 234 123 1234</h2>
-            <h2>+82 234 123 1234</h2>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
-          <div class="contact-info">
-            <h1>Email</h1>
-            <h2>info@gmail.com</h2>
-            <h2>abcd@gmail.com</h2>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" /></div>
-          <div class="contact-info">
-            <h1>Address</h1>
-            <h2>Medan, Sumatera Utara, Indonesia</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Contact Section -->
+                <div class="operator-card" data-operator="smartfren">
+                    <div class="operator-logo smartfren">
+                        <i class="fas fa-network-wired"></i>
+                        <span>Smartfren</span>
+                    </div>
+                    <div class="operator-info">
+                        <p>Pulsa & Paket Data</p>
+                        <span class="price-from">Mulai Rp 5.000</span>
+                    </div>
+                </div>
 
-  <!-- Footer -->
-  <section id="footer">
-    <div class="footer container">
-      <div class="brand">
-        <h1><span>D</span>odi <span>S</span>anjaya</h1>
-      </div>
-      <h2>Your Complete Web Solution</h2>
-      <div class="social-icon">
-        <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+                <div class="operator-card" data-operator="axis">
+                    <div class="operator-logo axis">
+                        <i class="fas fa-satellite-dish"></i>
+                        <span>AXIS</span>
+                    </div>
+                    <div class="operator-info">
+                        <p>Pulsa & Paket Data</p>
+                        <span class="price-from">Mulai Rp 5.000</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+    </section>
+
+    <!-- Products Section -->
+    <section id="produk" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Produk Terlengkap</h2>
+                <p class="section-subtitle">Berbagai layanan untuk kebutuhan digital Anda</p>
+            </div>
+            
+            <div class="products-tabs">
+                <button class="tab-btn active" data-tab="pulsa">
+                    <i class="fas fa-mobile-alt"></i>
+                    Pulsa Reguler
+                </button>
+                <button class="tab-btn" data-tab="paket-data">
+                    <i class="fas fa-wifi"></i>
+                    Paket Data
+                </button>
+                <button class="tab-btn" data-tab="token-listrik">
+                    <i class="fas fa-bolt"></i>
+                    Token Listrik
+                </button>
+                <button class="tab-btn" data-tab="e-wallet">
+                    <i class="fas fa-wallet"></i>
+                    E-Wallet
+                </button>
+            </div>
+
+            <!-- Pulsa Tab -->
+            <div class="tab-content active" id="pulsa">
+                <div class="products-grid">
+                    <div class="product-card popular">
+                        <div class="product-badge">Terpopuler</div>
+                        <div class="product-header">
+                            <div class="product-icon telkomsel">
+                                <i class="fas fa-signal"></i>
+                            </div>
+                            <div class="product-title">
+                                <h3>Pulsa Telkomsel</h3>
+                                <p>Semua nominal tersedia</p>
+                            </div>
+                        </div>
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="nominal">5.000</span>
+                                <span class="price">Rp 5.500</span>
+                                <button class="btn-buy" onclick="buyProduct('telkomsel', 5000, 5500)">Beli</button>
+                            </div>
+                            <div class="price-item">
+                                <span class="nominal">10.000</span>
+                                <span class="price">Rp 10.800</span>
+                                <button class="btn-buy" onclick="buyProduct('telkomsel', 10000, 10800)">Beli</button>
+                            </div>
+                            <div class="price-item">
+                                <span class="nominal">20.000</span>
+                                <span class="price">Rp 20.500</span>
+                                <button class="btn-buy" onclick="buyProduct('telkomsel', 20000, 20500)">Beli</button>
+                            </div>
+                            <div class="price-item">
+                                <span class="nominal">50.000</span>
+                                <span class="price">Rp 49.500</span>
+                                <button class="btn-buy" onclick="buyProduct('telkomsel', 50000, 49500)">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-header">
+                            <div class="product-icon xl">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <div class="product-title">
+                                <h3>Pulsa XL</h3>
+                                <p>Harga termurah</p>
+                            </div>
+                        </div>
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="nominal">5.000</span>
+                                <span class="price">Rp 5.400</span>
+                                <button class="btn-buy" onclick="buyProduct('xl', 5000, 5400)">Beli</button>
+                            </div>
+                            <div class="price-item">
+                                <span class="nominal">10.000</span>
+                                <span class="price">Rp 10.600</span>
+                                <button class="btn-buy" onclick="buyProduct('xl', 10000, 10600)">Beli</button>
+                            </div>
+                            <div class="price-item">
+                                <span class="nominal">25.000</span>
+                                <span class="price">Rp 24.800</span>
+                                <button class="btn-buy" onclick="buyProduct('xl', 25000, 24800)">Beli</button>
+                            </div>
+                            <div class="price-item">
+                                <span class="nominal">50.000</span>
+                                <span class="price">Rp 49.200</span>
+                                <button class="btn-buy" onclick="buyProduct('xl', 50000, 49200)">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-header">
+                            <div class="product-icon indosat">
+                                <i class="fas fa-broadcast-tower"></i>
+                            </div>
+                            <div class="product-title">
+                                <h3>Pulsa Indosat</h3>
+                                <p>Proses super cepat</p>
+                            </div>
+                        </div>
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="nominal">5.000</span>
+                                <span class="price">Rp 5.450</span>
+                                <button class="btn-buy" onclick="buyProduct('indosat', 5000, 5450)">Beli</button>
+                            </div>
+                            <div class="price-item">
+                                <span class="nominal">10.000</span>
+                                <span class="price">Rp 10.700</span>
+                                <button class="btn-buy" onclick="buyProduct('indosat', 10000, 10700)">Beli</button>
+                            </div>
+                            <div class="price-item">
+                                <span class="nominal">25.000</span>
+                                <span class="price">Rp 24.900</span>
+                                <button class="btn-buy" onclick="buyProduct('indosat', 25000, 24900)">Beli</button>
+                            </div>
+                            <div class="price-item">
+                                <span class="nominal">100.000</span>
+                                <span class="price">Rp 98.500</span>
+                                <button class="btn-buy" onclick="buyProduct('indosat', 100000, 98500)">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paket Data Tab -->
+            <div class="tab-content" id="paket-data">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-header">
+                            <div class="product-icon telkomsel">
+                                <i class="fas fa-signal"></i>
+                            </div>
+                            <div class="product-title">
+                                <h3>Paket Data Telkomsel</h3>
+                                <p>Kuota internet berkualitas</p>
+                            </div>
+                        </div>
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="nominal">1GB</span>
+                                <span class="price">Rp 15.000</span>
+                                <button class="btn-buy" onclick="buyProduct('telkomsel-data', '1GB', 15000)">Beli</button>
+                            </div>
+                            <div class="price-item">
+                                <span class="nominal">3GB</span>
+                                <span class="price">Rp 35.000</span>
+                                <button class="btn-buy" onclick="buyProduct('telkomsel-data', '3GB', 35000)">Beli</button>
+                            </div>
+                            <div class="price-item">
+                                <span class="nominal">8GB</span>
+                                <span class="price">Rp 75.000</span>
+                                <button class="btn-buy" onclick="buyProduct('telkomsel-data', '8GB', 75000)">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Token Listrik Tab -->
+            <div class="tab-content" id="token-listrik">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-header">
+                            <div class="product-icon pln">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="product-title">
+                                <h3>Token Listrik PLN</h3>
+                                <p>Bayar token listrik mudah</p>
+                            </div>
+                        </div>
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="nominal">20.000</span>
+                                <span class="price">Rp 21.000</span>
+                                <button class="btn-buy" onclick="buyProduct('pln', 20000, 21000)">Beli</button>
+                            </div>
+                            <div class="price-item">
+                                <span class="nominal">50.000</span>
+                                <span class="price">Rp 51.000</span>
+                                <button class="btn-buy" onclick="buyProduct('pln', 50000, 51000)">Beli</button>
+                            </div>
+                            <div class="price-item">
+                                <span class="nominal">100.000</span>
+                                <span class="price">Rp 101.000</span>
+                                <button class="btn-buy" onclick="buyProduct('pln', 100000, 101000)">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- E-Wallet Tab -->
+            <div class="tab-content" id="e-wallet">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-header">
+                            <div class="product-icon gopay">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <div class="product-title">
+                                <h3>GoPay</h3>
+                                <p>Top up saldo GoPay</p>
+                            </div>
+                        </div>
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="nominal">25.000</span>
+                                <span class="price">Rp 26.000</span>
+                                <button class="btn-buy" onclick="buyProduct('gopay', 25000, 26000)">Beli</button>
+                            </div>
+                            <div class="price-item">
+                                <span class="nominal">50.000</span>
+                                <span class="price">Rp 51.500</span>
+                                <button class="btn-buy" onclick="buyProduct('gopay', 50000, 51500)">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <p>Copyright © 2023 Dodi Sanjaya. All rights reserved</p>
+    </section>
+
+    <!-- How to Order Section -->
+    <section id="cara-order" class="how-to-order">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Cara Order Mudah</h2>
+                <p class="section-subtitle">Hanya 3 langkah untuk mendapatkan pulsa Anda</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Pilih Produk</h3>
+                        <p>Pilih operator dan nominal yang diinginkan dari daftar produk kami</p>
+                        <i class="fas fa-mobile-alt step-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Masukkan Nomor</h3>
+                        <p>Masukkan nomor handphone tujuan dengan benar</p>
+                        <i class="fas fa-keyboard step-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Bayar & Selesai</h3>
+                        <p>Pilih metode pembayaran dan pulsa akan terkirim otomatis</p>
+                        <i class="fas fa-credit-card step-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Keunggulan PulsaKu</h2>
+                <p class="section-subtitle">Mengapa memilih layanan kami?</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Proses Super Cepat</h3>
+                    <p>Pulsa masuk dalam hitungan detik setelah pembayaran berhasil</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>100% Aman</h3>
+                    <p>Transaksi dijamin aman dengan sistem keamanan berlapis</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Buka 24/7</h3>
+                    <p>Layanan tersedia 24 jam sehari, 7 hari seminggu</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Harga Terbaik</h3>
+                    <p>Dapatkan harga termurah untuk semua produk pulsa</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Customer Service</h3>
+                    <p>Tim support siap membantu Anda kapan saja</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Semua Operator</h3>
+                    <p>Melayani semua operator seluler di Indonesia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kata Pelanggan</h2>
+                <p class="section-subtitle">Kepuasan pelanggan adalah prioritas utama kami</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Pelayanan sangat cepat dan mudah. Pulsa langsung masuk dalam hitungan detik!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Budi Santoso</h4>
+                            <span>Pelanggan Setia</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Harganya paling murah dibanding tempat lain. Recommended banget!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Sari Dewi</h4>
+                            <span>Mahasiswa</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Website mudah digunakan dan customer service responsif. Top!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Ahmad Rizki</h4>
+                            <span>Pengusaha</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>PulsaKu</span>
+                    </div>
+                    <p>Platform terpercaya untuk isi pulsa online dengan harga terbaik dan pelayanan 24/7.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Produk</h4>
+                    <ul>
+                        <li><a href="#">Pulsa Reguler</a></li>
+                        <li><a href="#">Paket Data</a></li>
+                        <li><a href="#">Token Listrik</a></li>
+                        <li><a href="#">E-Wallet</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#">Cara Order</a></li>
+                        <li><a href="#">Cek Transaksi</a></li>
+                        <li><a href="#">Bantuan</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>0812-3456-7890</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>0812-3456-7890</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>cs@pulsaku.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 PulsaKu. Semua hak dilindungi.</p>
+                    <div class="footer-links">
+                        <a href="#">Syarat & Ketentuan</a>
+                        <a href="#">Kebijakan Privasi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Masuk ke Akun</h2>
+                <span class="close" onclick="closeLoginModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="phone">Nomor WhatsApp</label>
+                        <input type="tel" id="phone" name="phone" placeholder="08123456789" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="remember">
+                            <span class="checkmark"></span>
+                            Ingat saya
+                        </label>
+                        <a href="#" class="forgot-password">Lupa Password?</a>
+                    </div>
+                    <button type="submit" class="btn-submit">Masuk</button>
+                </form>
+                <div class="form-divider">
+                    <span>atau</span>
+                </div>
+                <button class="btn-register" onclick="showRegisterForm()">Daftar Akun Baru</button>
+            </div>
+        </div>
     </div>
-  </section>
-  <!-- End Footer -->
-  <script src="./app.js"></script>
+
+    <!-- Purchase Modal -->
+    <div id="purchaseModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Konfirmasi Pembelian</h2>
+                <span class="close" onclick="closePurchaseModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="purchaseDetails"></div>
+                <form id="purchaseForm">
+                    <div class="form-group">
+                        <label for="targetNumber">Nomor Tujuan</label>
+                        <input type="tel" id="targetNumber" name="targetNumber" placeholder="08123456789" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerName">Nama Pembeli</label>
+                        <input type="text" id="customerName" name="customerName" placeholder="Nama lengkap" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="paymentMethod">Metode Pembayaran</label>
+                        <select id="paymentMethod" name="paymentMethod" required>
+                            <option value="">Pilih metode pembayaran</option>
+                            <option value="gopay">GoPay</option>
+                            <option value="ovo">OVO</option>
+                            <option value="dana">DANA</option>
+                            <option value="qris">QRIS</option>
+                            <option value="bank">Transfer Bank</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">Proses Pembelian</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/628123456789" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="app.js"></script>
 </body>
-
 </html>
