@@ -1,0 +1,35 @@
+"{
+    \"name\": \"PulsaKu - Isi Pulsa Online\",
+    \"short_name\": \"PulsaKu\",
+    \"description\": \"Platform terpercaya untuk isi pulsa online semua operator\",
+    \"start_url\": \"/\",
+    \"display\": \"standalone\",
+    \"background_color\": \"#2563eb\",
+    \"theme_color\": \"#2563eb\",
+    \"orientation\": \"portrait-primary\",
+    \"icons\": [
+        {
+            \"src\": \"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=192&h=192&fit=crop&crop=center\",
+            \"sizes\": \"192x192\",
+            \"type\": \"image/png\",
+            \"purpose\": \"any maskable\"
+        },
+        {
+            \"src\": \"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=512&h=512&fit=crop&crop=center\",
+            \"sizes\": \"512x512\",
+            \"type\": \"image/png\",
+            \"purpose\": \"any maskable\"
+        }
+    ],
+    \"categories\": [\"finance\", \"utilities\", \"shopping\"],
+    \"lang\": \"id\",
+    \"scope\": \"/\",
+    \"screenshots\": [
+        {
+            \"src\": \"https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=540&h=720&fit=crop\",
+            \"sizes\": \"540x720\",
+            \"type\": \"image/png\",
+            \"form_factor\": \"narrow\"
+        }
+    ]
+}"
